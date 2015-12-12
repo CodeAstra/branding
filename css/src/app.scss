@@ -1,0 +1,53 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.tile {
+  width: 33vw;
+  height: 50vh;
+  position: relative;
+  text-align: center;
+  float: left;
+
+  .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+
+    .front {
+      display: block;
+
+      h1 {
+        margin: 0;
+      }
+
+      p {
+        margin: 1em 0 0;
+      }
+    }
+
+    .back {
+      display: none;
+
+      p {
+        margin: 0.5em 0;
+      }
+    }
+  }
+
+  &:hover {
+    .content {
+      .front {
+        display: none;
+      }
+
+      .back {
+        display: block;
+      }
+    }
+  }
+}

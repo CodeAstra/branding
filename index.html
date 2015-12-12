@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="BrandApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Code Astra Branding</title>
+
+    <link rel="stylesheet" href="css/app.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,100,300,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,100,300,600,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body ng-controller="HomeCtrl as home">
+    <div ng-repeat="colorCombination in home.colorCombinations" class="tile" style="{{home.tileStyles(colorCombination)}}">
+      <div class="content">
+        <div class="front">
+          <h1>Code Astra</h1>
+          <p>India's First Coding Bootcamp</p>
+        </div>
+        <div class="back">
+          <p ng-repeat="fontWeight in home.fonts[home.fontName].weights" style="font-weight: {{fontWeight}}">India's First Coding Bootcamp {{fontWeight}}</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

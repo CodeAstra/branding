@@ -1,0 +1,33 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  border: none; }
+
+.tile {
+  width: 33vw;
+  height: 50vh;
+  position: relative;
+  text-align: center;
+  float: left; }
+  .tile .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0; }
+    .tile .content .front {
+      display: block; }
+      .tile .content .front h1 {
+        margin: 0; }
+      .tile .content .front p {
+        margin: 1em 0 0; }
+    .tile .content .back {
+      display: none; }
+      .tile .content .back p {
+        margin: 0.5em 0; }
+  .tile:hover .content .front {
+    display: none; }
+  .tile:hover .content .back {
+    display: block; }
+
+/*# sourceMappingURL=app.css.map */
